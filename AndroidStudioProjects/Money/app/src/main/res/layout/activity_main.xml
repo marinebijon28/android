@@ -89,4 +89,15 @@
         app:layout_constraintBottom_toTopOf="@+id/resultTextView"
         app:layout_constraintStart_toStartOf="@+id/flag_usaImageView"
         app:layout_constraintTop_toBottomOf="@+id/flag_usaImageView" />
+
+    <Button
+        android:id="@+id/aboutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="A propos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:backgroundTint="#E91E63"
+        app:layout_constraintStart_toStartOf="@+id/flag_usaImageView"
+        app:layout_constraintTop_toBottomOf="@+id/flag_usaImageView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

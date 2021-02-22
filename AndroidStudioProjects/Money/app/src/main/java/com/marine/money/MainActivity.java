@@ -2,6 +2,7 @@ package com.marine.money;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,6 +34,15 @@ public class MainActivity extends AppCompatActivity {
                 TextView resultTextView = findViewById(R.id.resultTextView);
                 Log.i("MainActivity", String.valueOf(resultTextView));
                 resultTextView.setText((String) String.valueOf(1.21F * Float.parseFloat(number)) + "$");
+            }
+        });
+
+        final Button aboutButton = findViewById(R.id.aboutButton);
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View w){
+               Intent aboutActivity = new Intent(MainActivity.this, AboutActivity.class);
+               startActivity(aboutActivity);
             }
         });
     }
