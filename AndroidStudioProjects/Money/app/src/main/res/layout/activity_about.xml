@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".AboutActivity">
 
     <TextView
         android:id="@+id/versionTextView"
-        android:layout_width="184dp"
-        android:layout_height="48dp"
+        android:layout_width="193dp"
+        android:layout_height="38dp"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="100dp"
@@ -18,7 +19,9 @@
         android:text="version 1.0"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/authorTextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +33,9 @@
         android:text="Marine BIJON"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/versionTextView"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/versionTextView"
         app:layout_constraintTop_toBottomOf="@+id/versionTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
