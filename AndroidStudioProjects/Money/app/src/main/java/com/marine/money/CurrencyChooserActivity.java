@@ -21,11 +21,7 @@ public class CurrencyChooserActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Money money;
                 money = new Money(R.drawable.flag_usa, 1.21F, "$");
-
-                Intent mainActivity = new Intent(CurrencyChooserActivity.this, MainActivity.class);
-                mainActivity.putExtra("money", (Parcelable) money);
-
-                startActivity(mainActivity);
+                sendMainActivity(money);
             }
         });
         findViewById(R.id.yenButton).setOnClickListener(new View.OnClickListener() {
@@ -33,11 +29,7 @@ public class CurrencyChooserActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Money money;
                 money = new Money(R.drawable.flag_japan, 127.89F, "Y");
-
-                Intent mainActivity = new Intent(CurrencyChooserActivity.this, MainActivity.class);
-                mainActivity.putExtra("money", (Parcelable) money);
-
-                startActivity(mainActivity);
+                sendMainActivity(money);
             }
         });
         findViewById(R.id.PoundButton).setOnClickListener(new View.OnClickListener() {
@@ -45,14 +37,16 @@ public class CurrencyChooserActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Money money;
                 money = new Money(R.drawable.flag_england, 0.86F, "£");
-                Log.i("MainActivity", String.valueOf(money.symbole));
-
-                Intent mainActivity = new Intent(CurrencyChooserActivity.this, MainActivity.class);
-                mainActivity.putExtra("money", (Parcelable) money);
-
-                startActivity(mainActivity);
+                sendMainActivity(money);
             }
         });
 
     }
+
+    private void sendMainActivity(Money money) {
+        Intent mainActivity = new Intent(CurrencyChooserActivity.this, MainActivity.class);
+        mainActivity.putExtra("money", (Parcelable) money);
+        startActivity(mainActivity);
+    }
+
 }

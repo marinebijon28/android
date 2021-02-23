@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         User user = new User("Marine BIJON",  "version 1.0");
         Log.i("MainActivity", String.valueOf(user.name));
 
-        ImageView image = findViewById(R.id.flag_usaImageView);
+        ImageView image = findViewById(R.id.flagImageView);
         image.setImageResource(money.image);
 
         final Button ConvertButton = findViewById(R.id.ConvertButton);
